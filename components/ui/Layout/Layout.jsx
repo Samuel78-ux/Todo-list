@@ -126,25 +126,21 @@ export default function TodoList() {
 	};
 
 	const display = showAddTask ? (
-		<Fragment>
-			<FormAddList
-				content='Add onglet'
-				myvalue={inputList}
-				changedForm={changedFormListHandler}
-				submit={submittedListHandler}
-				cancel={showHideListClickedHandler}
-			/>
-		</Fragment>
+		<FormAddList
+			content='Add onglet'
+			myvalue={inputList}
+			changedForm={changedFormListHandler}
+			submit={submittedListHandler}
+			cancel={showHideListClickedHandler}
+		/>
 	) : (
-		<Fragment>
-			<FormAddTask
-				content='Add task'
-				myvalue={inputTask}
-				changedForm={changedFormTaskHandler}
-				submit={submittedTaskHandler}
-				cancel={showHideTaskClickedHandler}
-			/>
-		</Fragment>
+		<FormAddTask
+			content='Add task'
+			myvalue={inputTask}
+			changedForm={changedFormTaskHandler}
+			submit={submittedTaskHandler}
+			cancel={showHideTaskClickedHandler}
+		/>
 	);
 
 	return (
