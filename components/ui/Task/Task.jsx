@@ -4,7 +4,7 @@ export default function Task(props) {
 	return (
 		<ul className='flex gap-4 p-2 border-b p-6 text-xl'>
 			<input type='checkbox'></input>
-			<li nClick={props.doneClicked}>{props.content}</li>
+			<li onClick={props.doneClicked}>{props.content}</li>
 			<div className='ml-auto'>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
