@@ -8,7 +8,7 @@ import Title from '../Title/Title';
 import List from '../List/List';
 
 export default function TodoList() {
-	// Initialize state variables
+	
 	const [tasks, setTasks] = useState([
 		{
 			id: 1,
@@ -50,7 +50,6 @@ export default function TodoList() {
 	const [showAddTask, setHideTask] = useState(true);
 	const [showAddList, setHideList] = useState(true);
 
-	// Event handlers
 	const changeList = (task) => {
 		setActiveList(task);
 	};
