@@ -2,7 +2,7 @@ export default function AddList(props) {
 	return (
 		<button
 			className='border-l border-r border-t rounded-t-lg p-2 ml-8 active:bg-slate-50 font-medium'
-			//task.id === activeTab.id ? 'active' : ''
+		
 			onClick={props.displayAddList}
 		>
 			<svg
