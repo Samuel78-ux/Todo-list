@@ -8,7 +8,6 @@ import Title from '../Title/Title';
 import List from '../List/List';
 
 export default function TodoList() {
-	
 	const [tasks, setTasks] = useState([
 		{
 			id: 1,
