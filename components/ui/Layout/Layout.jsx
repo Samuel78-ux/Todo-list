@@ -128,7 +128,7 @@ export default function TodoList() {
 	const display = showAddTask ? (
 		<FormAddList
 			content='Add onglet'
-			myvalue={inputList}
+			myValue={inputList}
 			changedForm={changedFormListHandler}
 			submit={submittedListHandler}
 			cancel={showHideListClickedHandler}
@@ -136,7 +136,7 @@ export default function TodoList() {
 	) : (
 		<FormAddTask
 			content='Add task'
-			myvalue={inputTask}
+			myValue={inputTask}
 			changedForm={changedFormTaskHandler}
 			submit={submittedTaskHandler}
 			cancel={showHideTaskClickedHandler}
