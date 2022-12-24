@@ -10,7 +10,7 @@ export default function FormAddList(props) {
 					className='ml-2 border border-gray-400 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600'
 					required
 					type='text'
-					value={props.myvalue}
+					value={props.myValue}
 					onChange={props.changedForm}
 				/>
 				<button
