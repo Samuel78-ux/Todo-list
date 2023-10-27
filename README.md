@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Introduction
+Ce document d'exploitation vous guide à travers l'utilisation du Gestionnaire de mots de passe Python. Ce programme vous permet de stocker en toute sécurité vos mots de passe et de les gérer. Le programme est écrit en Python et utilise la bibliothèque "cryptography" pour chiffrer les mots de passe.
 
-## Getting Started
+## Prérequis
+- Python 3.9 minimum installé sur votre système.
+- Les bibliothèques Python nécessaires sont installées via `pip install cryptography colorama...`.
 
-First, run the development server:
+## Fonctionnalités
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Présentation du Menu:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Add password manually
+2. Add random password
+3. List passwords
+4. Delete password
+5. Modify Password
+6. Quit
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Pour utiliser le menu, il suffit de rentrer une valeur comprise entre 1 et 6. Toute autre valeur lèvera une erreur.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Exemple : je souhaite utiliser la suppression du mot de passe, je vais donc rentrer 4 et 6 pour quitter le programme.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Le gestionnaire de mots de passe offre les fonctionnalités suivantes :
 
-## Learn More
+- Ajout manuel de mots de passe :
+  - Vous pouvez ajouter un service (par exemple, un site Web) et son mot de passe associé manuellement.
+  - Le mot de passe est chiffré avant d'être stocké.
+- Génération de mots de passe aléatoires :
+  - Vous pouvez générer un mot de passe aléatoire pour un service spécifié.
+  - Le mot de passe généré est chiffré avant d'être stocké.
+- Liste des mots de passe :
+  - Vous pouvez afficher la liste de services et de mots de passe stockés.
+  - Les mots de passe sont déchiffrés pour l'affichage.
+- Suppression de mots de passe :
+  - Vous pouvez supprimer un mot de passe pour un service spécifié.
+- Modification de mots de passe :
+  - Vous pouvez modifier le mot de passe pour un service spécifié.
+- Quitter :
+  - Vous pouvez quitter le programme.
 
-To learn more about Next.js, take a look at the following resources:
+## Utilisation
+1. Exécutez le programme en utilisant Python : `python nom_du_programme.py` (assurez-vous que le code est sauvegardé dans un fichier .py).
+2. Un menu s'affiche avec des options numérotées. Vous pouvez choisir une option en entrant le numéro correspondant et en appuyant sur Entrée.
+3. Selon l'option choisie, suivez les instructions pour ajouter, générer, lister, supprimer, ou modifier des mots de passe.
+4. Tous les mots de passe sont stockés dans un fichier JSON chiffré appelé "ma_phrase.json". Assurez-vous de le conserver en lieu sûr.
+5. Lorsque vous avez terminé, utilisez l'option "Quitter" pour sortir du programme.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes supplémentaires
+- Les mots de passe sont chiffrés à l'aide de la bibliothèque cryptography, ce qui garantit leur sécurité.
+- Assurez-vous de conserver le fichier de clé ("ma_cle.key") en sécurité, car il est essentiel pour le déchiffrement des mots de passe.
+- Le programme utilise la bibliothèque "colorama" pour afficher le texte en couleurs.
+- Si vous perdez la clé ou le fichier de clé, vous ne pourrez pas récupérer les mots de passe stockés.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+C'est tout ! Vous pouvez maintenant utiliser le gestionnaire de mots de passe Python pour stocker et gérer en toute sécurité vos informations de connexion. Assurez-vous de prendre des précautions appropriées pour protéger votre fichier de clé.
